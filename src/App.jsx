@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import AOS from 'aos'
 import NavigationBar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import ValueProposition from './components/sections/ValueProposition'
@@ -10,6 +12,15 @@ import Footer from './components/layout/Footer'
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 100
+    });
+  }, []);
   return (
     <div className="App">
       <NavigationBar />

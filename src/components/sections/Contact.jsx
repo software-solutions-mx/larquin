@@ -80,8 +80,8 @@ const Contact = () => {
         <Container>
           <Row className="text-center">
             <Col>
-              <h2 className="contact-title text-white mb-3">Contacto</h2>
-              <p className="contact-subtitle text-white">
+              <h2 className="contact-title text-white mb-3" data-aos="fade-up">Contacto</h2>
+              <p className="contact-subtitle text-white" data-aos="fade-up" data-aos-delay="100">
                 Estamos listos para escucharte y ofrecerte soluciones personalizadas <br />
                 para hacer realidad tu proyecto.
               </p>
@@ -94,7 +94,7 @@ const Contact = () => {
         <Row className="g-4">
           {/* Contact Information Cards */}
           <Col lg={4}>
-            <div className="contact-info-wrapper">
+            <div className="contact-info-wrapper" data-aos="fade-right">
               <h3 className="info-title mb-4">Información de Contacto</h3>
               
               {contactInfo.map((info, index) => (
@@ -150,7 +150,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Col lg={8}>
-            <Card className="contact-form-card border-0">
+            <Card className="contact-form-card border-0" data-aos="fade-left">
               <Card.Body className="p-4 p-md-5">
                 <h3 className="form-title mb-4">Envíanos un Mensaje</h3>
                 <p className="text-muted mb-4">

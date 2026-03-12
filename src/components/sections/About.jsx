@@ -6,7 +6,7 @@ const About = () => {
     <section id="nosotros" className="about-section py-5">
       <Container>
         <Row className="mb-5">
-          <Col lg={6} className="mb-4 mb-lg-0">
+          <Col lg={6} className="mb-4 mb-lg-0" data-aos="fade-right">
             <h2 className="section-title mb-4">Nuestra Filosofía</h2>
             <p className="about-text">
               Creemos que cada proyecto es más que una simple construcción; es la oportunidad 
@@ -20,7 +20,7 @@ const About = () => {
             </p>
           </Col>
           <Col lg={6}>
-            <div className="about-image-wrapper mb-4">
+            <div className="about-image-wrapper mb-4" data-aos="fade-left">
               <img
                 src="/proyecto-1.jpg"
                 alt="Proyecto Construcción Larquin"
@@ -31,7 +31,7 @@ const About = () => {
         </Row>
 
         <Row className="mb-5">
-          <Col lg={6} className="order-lg-2 mb-4 mb-lg-0">
+          <Col lg={6} className="order-lg-2 mb-4 mb-lg-0" data-aos="fade-left">
             <h2 className="section-title mb-4">Nuestra Misión</h2>
             <p className="about-text">
               Nuestra misión es ofrecer soluciones integrales y personalizadas, donde nuestros 
@@ -44,7 +44,7 @@ const About = () => {
             </p>
           </Col>
           <Col lg={6} className="order-lg-1">
-            <div className="about-image-wrapper">
+            <div className="about-image-wrapper" data-aos="fade-right">
               <img
                 src="/proyecto-2.jpg"
                 alt="Construcción Residencial"
@@ -56,13 +56,13 @@ const About = () => {
 
         <Row className="mt-5">
           <Col>
-            <h2 className="section-title text-center mb-5">Qué Nos Diferencia</h2>
+            <h2 className="section-title text-center mb-5" data-aos="fade-up">Qué Nos Diferencia</h2>
           </Col>
         </Row>
 
         <Row className="g-4">
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="0">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-award-fill"></i>
               </div>
@@ -75,7 +75,7 @@ const About = () => {
           </Col>
 
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="100">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-puzzle-fill"></i>
               </div>
@@ -88,7 +88,7 @@ const About = () => {
           </Col>
 
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="200">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-lightning-charge-fill"></i>
               </div>
@@ -101,7 +101,7 @@ const About = () => {
           </Col>
 
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="0">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-house-heart-fill"></i>
               </div>
@@ -115,7 +115,7 @@ const About = () => {
           </Col>
 
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="100">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-people-fill"></i>
               </div>
@@ -128,7 +128,7 @@ const About = () => {
           </Col>
 
           <Col md={6} lg={4}>
-            <div className="differentiator-card h-100">
+            <div className="differentiator-card h-100" data-aos="fade-up" data-aos-delay="200">
               <div className="differentiator-icon mb-3">
                 <i className="bi bi-shield-check-fill"></i>
               </div>

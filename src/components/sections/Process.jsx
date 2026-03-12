@@ -40,7 +40,7 @@ const Process = () => {
       <Container>
         <Row className="text-center mb-5">
           <Col>
-            <h2 className="section-title mb-3">Nuestro Proceso</h2>
+            <h2 className="section-title mb-3" data-aos="fade-up">Nuestro Proceso</h2>
             <p className="section-subtitle text-muted">
               5 etapas para llevar tu proyecto desde la idea hasta la realidad
             </p>
@@ -52,7 +52,11 @@ const Process = () => {
           
           {steps.map((step, index) => (
             <Col key={index} lg={12} className="mb-4">
-              <div className={`process-step ${index % 2 === 0 ? 'step-left' : 'step-right'}`}>
+              <div 
+                className={`process-step ${index % 2 === 0 ? 'step-left' : 'step-right'}`}
+                data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                data-aos-delay={index * 100}
+              >
                 <Row className={`align-items-center ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
                   <Col lg={5} className={index % 2 === 0 ? 'text-lg-end' : 'text-lg-start'}>
                     <div className="step-content">

@@ -70,7 +70,7 @@ const Services = () => {
       <Container>
         <Row className="text-center mb-5">
           <Col>
-            <h2 className="section-title mb-3">Nuestros Servicios</h2>
+            <h2 className="section-title mb-3" data-aos="fade-up">Nuestros Servicios</h2>
             <p className="section-subtitle text-muted">
               Soluciones completas de construcción y remodelación para tu hogar
             </p>
@@ -80,7 +80,7 @@ const Services = () => {
         <Row className="g-4">
           {services.map((service, index) => (
             <Col key={index} sm={6} md={4} lg={3}>
-              <Card className="service-card h-100 border-0 shadow-sm">
+              <Card className="service-card h-100 border-0 shadow-sm" data-aos="fade-up" data-aos-delay={index * 50}>
                 <Card.Body className="text-center p-4">
                   <div className="service-icon mb-3">
                     <i className={`bi ${service.icon}`}></i>

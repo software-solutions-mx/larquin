@@ -30,7 +30,7 @@ const ValueProposition = () => {
       <Container>
         <Row className="text-center mb-5">
           <Col>
-            <h2 className="section-title mb-3">¿Por Qué Elegir Construcción Americana Larquin?</h2>
+            <h2 className="section-title mb-3" data-aos="fade-up">¿Por Qué Elegir Construcción Americana Larquin?</h2>
             <p className="section-subtitle text-muted">
               Somos tu mejor opción para construir o remodelar tu hogar
             </p>
@@ -40,7 +40,7 @@ const ValueProposition = () => {
         <Row className="g-4">
           {values.map((value, index) => (
             <Col key={index} md={6} lg={3}>
-              <div className="value-card h-100 text-center p-4">
+              <div className="value-card h-100 text-center p-4" data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="value-icon mb-3">
                   <i className={`bi ${value.icon}`}></i>
                 </div>

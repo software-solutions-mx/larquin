@@ -72,9 +72,9 @@ const Projects = () => {
       <Container>
         <Row className="text-center mb-5">
           <Col>
-            <span className="section-badge">+20 Años de experiencia</span>
-            <h2 className="section-title mb-3">Proyectos</h2>
-            <p className="section-subtitle text-muted">
+            <span className="section-badge" data-aos="fade-up">+20 Años de experiencia</span>
+            <h2 className="section-title mb-3" data-aos="fade-up" data-aos-delay="100">Proyectos</h2>
+            <p className="section-subtitle text-muted" data-aos="fade-up" data-aos-delay="200">
               En Constructora Larquin, cada proyecto es un reflejo de nuestra dedicación, 
               experiencia y atención al detalle. A lo largo de más de 20 años, hemos transformado 
               terrenos vacíos en hogares de ensueño, remodelado espacios para darles nueva vida, 
@@ -104,7 +104,7 @@ const Projects = () => {
         <Row className="g-4">
           {filteredProjects.map((project, index) => (
             <Col key={index} sm={6} lg={4}>
-              <Card className="project-card h-100 border-0">
+              <Card className="project-card h-100 border-0" data-aos="zoom-in" data-aos-delay={index * 100}>
                 <div className="project-image-wrapper">
                   <Card.Img
                     variant="top"

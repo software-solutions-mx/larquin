@@ -8,14 +8,14 @@ const Hero = () => {
       <Container className="hero-content">
         <Row className="align-items-center min-vh-100">
           <Col lg={8} className="text-white">
-            <h1 className="hero-title mb-4">
+            <h1 className="hero-title mb-4" data-aos="fade-up">
               Construimos Tus Sueños al Estilo Americano
             </h1>
-            <p className="hero-subtitle mb-4">
+            <p className="hero-subtitle mb-4" data-aos="fade-up" data-aos-delay="100">
               Más de 20 años de experiencia en construcción residencial de alta calidad.
               Servicio completo <strong>llave en mano</strong> en Delicias, Chihuahua.
             </p>
-            <div className="hero-features mb-5">
+            <div className="hero-features mb-5" data-aos="fade-up" data-aos-delay="200">
               <div className="feature-item">
                 <i className="bi bi-check-circle-fill me-2"></i>
                 <span>20+ Años de Experiencia</span>
@@ -29,7 +29,7 @@ const Hero = () => {
                 <span>Servicio Llave en Mano</span>
               </div>
             </div>
-            <div className="hero-buttons">
+            <div className="hero-buttons" data-aos="fade-up" data-aos-delay="300">
               <Button 
                 variant="primary" 
                 size="lg" 
