@@ -1,0 +1,114 @@
+.value-proposition-section {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+}
+
+.value-card {
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1);
+}
+
+.value-icon i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.value-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.value-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.company-intro {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.company-intro h3 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.experience-badge {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+}
+
+.badge-number {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.badge-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .value-proposition-section {
+    padding: 3rem 0;
+  }
+  
+  .company-intro {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .experience-badge {
+    margin-top: 2rem;
+  }
+}

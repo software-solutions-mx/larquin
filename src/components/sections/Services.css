@@ -1,0 +1,82 @@
+.services-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.service-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.service-cta {
+  box-shadow: 0 10px 40px rgba(0, 123, 255, 0.3);
+}
+
+.service-cta h3 {
+  font-weight: 700;
+}
+
+.service-cta .btn-light {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.service-cta .btn-light:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 3rem 0;
+  }
+  
+  .service-title {
+    min-height: auto;
+  }
+}

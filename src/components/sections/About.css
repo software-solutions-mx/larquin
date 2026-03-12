@@ -1,0 +1,152 @@
+.about-section {
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  padding: 5rem 0;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.05);
+}
+
+.differentiator-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.differentiator-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.differentiator-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.differentiator-card:hover .differentiator-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.differentiator-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.differentiator-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.differentiator-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.about-cta {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 2px solid #007bff;
+}
+
+.about-cta h3 {
+  color: #333;
+  font-weight: 700;
+}
+
+.about-cta .btn-primary {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.about-cta .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+@media (max-width: 991px) {
+  .about-image-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .differentiator-card {
+    margin-bottom: 1rem;
+  }
+
+  .about-cta {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-section {
+    padding: 3rem 0;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .differentiator-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .differentiator-icon i {
+    font-size: 1.75rem;
+  }
+
+  .differentiator-title {
+    font-size: 1.1rem;
+  }
+
+  .differentiator-text {
+    font-size: 0.95rem;
+  }
+}
