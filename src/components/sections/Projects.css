@@ -23,13 +23,24 @@
   line-height: 1.8;
 }
 
+.projects-section .mb-4 {
+  width: 100%;
+}
+
 .projects-filter {
   background: white;
   padding: 1rem;
   border-radius: 50px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  display: inline-flex;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.projects-filter .nav {
+  width: 100%;
+  justify-content: center;
 }
 
 .projects-filter .nav-item {
@@ -190,12 +201,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: rgba(120, 120, 120, 0.08);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 .modal-backdrop {
-  background-color: #000000 !important;
+  background-color: rgba(120, 120, 120, 0.08) !important;
   opacity: 1 !important;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
 }
 
 .modal-close-btn {
