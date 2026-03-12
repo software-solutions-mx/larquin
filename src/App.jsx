@@ -16,8 +16,8 @@ function App() {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
-      once: true,
-      mirror: false,
+      once: false,
+      mirror: true,
       offset: 100
     });
   }, []);
