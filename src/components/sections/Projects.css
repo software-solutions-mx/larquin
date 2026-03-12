@@ -1,23 +1,78 @@
 .projects-section {
-  background: linear-gradient(to bottom, white 0%, #f8f9fa 100%);
+  background: #f8f9fa;
   padding: 5rem 0;
 }
 
-.project-card {
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.projects-filter {
+  background: white;
+  padding: 1rem;
+  border-radius: 50px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.projects-filter .nav-item {
+  margin: 0 0.25rem;
+}
+
+.filter-link {
+  padding: 0.75rem 2rem !important;
+  border-radius: 50px !important;
+  font-weight: 600;
+  color: #666 !important;
   transition: all 0.3s ease;
-  cursor: pointer;
+  border: none !important;
+}
+
+.filter-link:hover {
+  background: #f8f9fa !important;
+  color: #007bff !important;
+}
+
+.filter-link.active {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+  color: white !important;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
   overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-image-wrapper {
   position: relative;
   overflow: hidden;
-  height: 250px;
+  height: 280px;
+  cursor: pointer;
 }
 
 .project-image {
@@ -37,43 +92,246 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
   display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
-  background: linear-gradient(to bottom, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0.6) 100%);
+  opacity: 1;
 }
 
-.project-status {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+.project-overlay-content {
+  width: 100%;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
 }
 
-.project-title {
+.project-card:hover .project-overlay-content {
+  transform: translateY(0);
+}
+
+.project-overlay-content h5 {
   font-size: 1.3rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-overlay-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Zoom Icon */
+.zoom-icon {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+  color: white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.project-card:hover .zoom-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.projects-cta {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 2px solid #007bff;
+}
+
+.projects-cta h3 {
   color: #333;
-  margin-bottom: 0.75rem;
+  font-weight: 700;
 }
 
-.project-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 0;
+.projects-cta .btn-primary {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.projects-cta .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Modal Styles */
+.project-modal {
+  z-index: 1055;
+}
+
+.project-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.project-modal .modal-dialog {
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.project-modal .modal-body {
+  padding: 0 !important;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.modal-backdrop {
+  background-color: #000000 !important;
+  opacity: 1 !important;
+}
+
+.modal-close-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1070;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+.modal-image-container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.modal-image-info {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  text-align: right;
+  max-width: 400px;
+}
+
+.modal-image-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.modal-image-info p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .projects-filter {
+    flex-wrap: wrap;
+    border-radius: 15px;
+  }
+
+  .filter-link {
+    padding: 0.6rem 1.5rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-image-wrapper {
+    height: 240px;
+  }
+}
+
+@media (max-width: 767px) {
   .projects-section {
     padding: 3rem 0;
   }
-  
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .projects-filter {
+    padding: 0.5rem;
+  }
+
+  .filter-link {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem;
+  }
+
   .project-image-wrapper {
     height: 200px;
+  }
+
+  .projects-cta {
+    padding: 2rem 1rem;
+  }
+
+  .modal-close-btn {
+    width: 45px;
+    height: 45px;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .modal-image-container {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modal-image {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .modal-image-info {
+    bottom: 1rem;
+    right: 1rem;
+    max-width: 300px;
+  }
+
+  .modal-image-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .modal-image-info p {
+    font-size: 0.9rem;
   }
 }

@@ -1,9 +1,22 @@
 import { useState } from 'react';
-import { Container, Row, Col, Card, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Card, Nav, Modal } from 'react-bootstrap';
+import { XLg, ZoomIn } from 'react-bootstrap-icons';
 import './Projects.css';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleImageClick = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setTimeout(() => setSelectedProject(null), 300);
+  };
 
   const projects = [
     {
@@ -105,7 +118,11 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <Col key={index} sm={6} lg={4}>
               <Card className="project-card h-100 border-0" data-aos="zoom-in" data-aos-delay={index * 100}>
-                <div className="project-image-wrapper">
+                <div 
+                  className="project-image-wrapper"
+                  onClick={() => handleImageClick(project)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <Card.Img
                     variant="top"
                     src={project.image}
@@ -114,6 +131,7 @@ const Projects = () => {
                   />
                   <div className="project-overlay">
                     <div className="project-overlay-content">
+                      <ZoomIn className="zoom-icon mb-3" size={40} />
                       <h5 className="text-white mb-2">{project.title}</h5>
                       <p className="text-white-50 mb-0">{project.description}</p>
                     </div>
@@ -137,6 +155,39 @@ const Projects = () => {
             </div>
           </Col>
         </Row>
+
+        {/* Modal para ver imagen en grande */}
+        <Modal 
+          show={showModal} 
+          onHide={handleCloseModal}
+          centered
+          size="xl"
+          className="project-modal"
+          dialogClassName="modal-fullscreen"
+        >
+          <Modal.Body className="p-0 position-relative">
+            <button 
+              className="modal-close-btn"
+              onClick={handleCloseModal}
+              aria-label="Cerrar"
+            >
+              <XLg size={24} />
+            </button>
+            {selectedProject && (
+              <div className="modal-image-container">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="modal-image"
+                />
+                <div className="modal-image-info">
+                  <h3 className="text-white mb-2">{selectedProject.title}</h3>
+                  <p className="text-white-50 mb-0">{selectedProject.description}</p>
+                </div>
+              </div>
+            )}
+          </Modal.Body>
+        </Modal>
       </Container>
     </section>
   );
