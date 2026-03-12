@@ -15,6 +15,7 @@ function App() {
       <main>
         <Hero />
         <ValueProposition />
+        <About />
         <Services />
         <Projects />
         <Process />
