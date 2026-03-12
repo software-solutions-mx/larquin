@@ -30,8 +30,8 @@ function App() {
         <About />
         <Services />
         <Projects />
-        <Contact />
         <Process />
+        <Contact />
       </main>
       <Footer />
     </div>
