@@ -17,7 +17,7 @@ const Footer = () => {
               Más de 20 años construyendo hogares de calidad al estilo americano en Delicias, Chihuahua.
             </p>
             <div className="social-links mt-3">
-              <a href="https://wa.me/526391294600" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://wa.me/526391207930" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="bi bi-whatsapp"></i>
               </a>
               <a href="mailto:contacto@construccionamericanalarquin.com" className="social-link">
@@ -48,12 +48,12 @@ const Footer = () => {
               </li>
               <li>
                 <i className="bi bi-telephone me-2"></i>
-                <a href="tel:6391294600">639 129 4600</a>
+                <a href="tel:6391207930">639 120 7930</a>
               </li>
               <li>
                 <i className="bi bi-whatsapp me-2"></i>
-                <a href="https://wa.me/526391294600" target="_blank" rel="noopener noreferrer">
-                  WhatsApp: 639 129 4600
+                <a href="https://wa.me/526391207930" target="_blank" rel="noopener noreferrer">
+                  WhatsApp: 639 120 7930
                 </a>
               </li>
               <li>

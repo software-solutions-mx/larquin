@@ -32,7 +32,7 @@ const Contact = () => {
     } else {
       // Enviar por WhatsApp
       const message = `Hola, mi nombre es ${formData.name}.%0A%0AAsunto: ${formData.subject}%0A%0A${formData.message}%0A%0AContacto:%0ATel: ${formData.phone}%0AEmail: ${formData.email}`;
-      window.open(`https://wa.me/526391294600?text=${message}`, '_blank');
+      window.open(`https://wa.me/526391207930?text=${message}`, '_blank');
       
       // Reset form
       setFormData({
@@ -57,8 +57,8 @@ const Contact = () => {
     {
       icon: <Telephone className="contact-icon" />,
       title: 'Llámanos:',
-      content: 'Tel. 639 129 4600',
-      link: 'tel:6391294600'
+      content: 'Tel. 639 120 7930',
+      link: 'tel:6391207930'
     },
     {
       icon: <Envelope className="contact-icon" />,
@@ -137,7 +137,7 @@ const Contact = () => {
                     variant="success" 
                     size="lg" 
                     className="whatsapp-btn"
-                    href="https://wa.me/526391294600?text=Nos%20gustaria%20saber%20mas%20sobre%20Construcción%20Larquin"
+                    href="https://wa.me/526391207930?text=Nos%20gustaria%20saber%20mas%20sobre%20Construcción%20Larquin"
                     target="_blank"
                   >
                     <Whatsapp className="me-2" />

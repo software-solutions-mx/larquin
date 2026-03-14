@@ -194,9 +194,9 @@ npm run lint         # Ejecuta ESLint para verificar código
 
 **Construcción Americana Larquin**
 - **Dirección**: Carretera Delicias-Meoqui Km 2, Cd. Delicias, Chihuahua
-- **Teléfono**: [639 129 4600](tel:6391294600)
+- **Teléfono**: [639 129 4600](tel:6391207930)
 - **Email**: [contacto@construccionamericanalarquin.com](mailto:contacto@construccionamericanalarquin.com)
-- **WhatsApp**: [+52 639 129 4600](https://wa.me/526391294600)
+- **WhatsApp**: [+52 639 129 4600](https://wa.me/526391207930)
 
 ## 📝 Notas de Desarrollo
 
