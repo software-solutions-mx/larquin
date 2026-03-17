@@ -71,6 +71,12 @@ const Footer = () => {
             <p className="footer-copyright mb-0">
               &copy; {new Date().getFullYear()} Construcción Americana Larquin. Todos los derechos reservados.
             </p>
+            <p className="footer-copyright mt-1 mb-0">
+              Desarrollado por{' '}
+              <a href="https://softwaresolutions.com.mx/" target="_blank" rel="noopener noreferrer">
+                Software Solutions
+              </a>
+            </p>
           </Col>
         </Row>
       </Container>
